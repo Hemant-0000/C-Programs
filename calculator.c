@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
   char operator;
   float answer;
 
-  printf("Enter calculation:\n\n");
+  printf("Enter calculation in \"value_one(5) operator(+) value_two(15)\" format:\n\n");
   scanf("%f %c %f", &valueOne, &operator, & valueTwo);
 
   switch(operator)
@@ -26,11 +26,9 @@ int main(int argc, char *argv[])
       break;
     case '^': answer = pow(valueOne,valueTwo);
       break;
-    case ' ': answer = sqrt(valueTwo);
-      break;
     default: goto fail;
     }
-  printf("%.9g%c%.9g =  %.6g\n\n",valueOne,operator, valueTwo, answer);
+  printf("%.9g %c %.9g =  %.6g\n",valueOne,operator, valueTwo, answer);
   goto exit;
  fail:
   printf("Fail.\n");

@@ -1,0 +1,1 @@
+Hello this is source file content which is going to be copied into target file huehue :)
